@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wemove Home</title>
+    <link rel="icon" href="../../Recursos/FavIcon/Wemove.png" type="image/png">
+    <link rel="stylesheet" href="../../Estilos/Componentes/StylesWemove.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body class="page-container" style="gap: 0; background-color: var(--color-background); height: 100%;">
+    <header style="display: flex; position: sticky; top: 0; z-index: 1000; background-color: var(--color-background); width: 100%;">
+        <div style="display: flex; flex-direction: row; padding-block: 12px; align-items: center; gap: 16px; flex-shrink: 0; width: 100%;">
+            <img src="../../Recursos/Avateres/Rectangle 1.png" style="height: 50px; width: 50px;" alt="Foto de perfil">
+            <div style="display: flex; flex-direction: column; width: 100%;">
+                <span style="font-family: 'inter'; font-size: 14px; color: var(--color-primary-950);" id="saludo">
+                    Buenas tardes
+                </span>
+                <span id="nombreUsuario" style="font-family: 'inter'; font-size: 24px; font-weight: 600; color: var(--color-primary-950);">
+                    Nicolle viloria
+                </span>
+            </div>
+            <div style=" display: flex;  border-radius: 50px; justify-content: center; align-items: center; min-width: 40px; min-height: 40px;">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+        </div>
+    </header>
+    <div style="display: flex; height: 100%; flex-direction: column;" class="layout">
+        <!--Resumen-->
+        <div style="display: flex; flex-direction: column; gap: 16px; padding-block: 20px; padding: 2px;">
+            <span style="color: var(--color-primary-950); font-family: 'inter'; font-weight: 400; font-size: 20px;">
+                Resumen
+            </span>
+            <div style="display: flex; gap: 10px;">
+                <div class="card-resumen">
+                    <div class="icon-resumen" style="background-color: var(--color-yellow-100);">
+                        <span class="material-symbols-outlined" style="color: var(--color-yellow-500);">
+                            bolt
+                        </span>
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="h-5" style="color: var(--color-primary-950);">
+                            176
+                        </span>
+                        <span class="xs-normal" style="color: var(--color-primary-900);">
+                            Experiencia
+                        </span>
+                    </div>
+                </div>
+                <div class="card-resumen">
+                    <div class="icon-resumen" style="background-color: var(--color-red-100);">
+                        <span class="material-symbols-outlined" style="color: var(--color-red-500);">
+                            mode_heat
+                        </span>
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="h-5" style="color: var(--color-primary-950);">
+                            12
+                        </span>
+                        <span class="xs-normal" style="color: var(--color-primary-900);">
+                            Días de racha
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <div class="card-resumen">
+                    <div class="icon-resumen" style="background-color: var(--color-primary-100);">
+                        <span class="material-symbols-outlined" style="color: var(--color-primary-500);">
+                            trophy
+                        </span>
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="h-5" style="color: var(--color-primary-950);">
+                            06
+                        </span>
+                        <span class="xs-normal" style="color: var(--color-primary-900);">
+                            Retos completados
+                        </span>
+                    </div>
+                </div>
+                <div class="card-resumen">
+                    <div class="icon-resumen" style="background-color: var(--color-green-100);">
+                        <span class="material-symbols-outlined" style="color: var(--color-green-500);">
+                            bar_chart
+                        </span>
+                    </div>
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="h-5" style="color: var(--color-primary-950);">
+                            Nivel 06
+                        </span>
+                        <span class="xs-normal" style="color: var(--color-primary-900);">
+                            Principiante
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Mi progreso-->
+        <div class="card-progreso">
+            <div style="display: flex; justify-content: space-between;">
+                <span class="h-5" style="font-weight: 400; display: flex;">
+                    Mi progreso
+                </span>
+                <div class="tag-yellow sm-normal">
+                    Prom 78,3%
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column; height: 100%; justify-content: flex-end;">
+                <ul style="margin: 0; display: flex; gap: 20px; justify-content: flex-end; padding: 0 16px 0 0;">
+                    <li class="bar-container">
+                        <div class="bars-default" style="height: 90px;">
+                        </div>
+                        <div class="xs-normal">
+                            Dom
+                        </div>
+                    </li>
+                    <li class="bar-container">
+                        <div class="bars-default" style="height: 70px;">
+                        </div>
+                        <div class="xs-normal">
+                            Lun
+                        </div>
+                    </li>
+                    <li class="bar-container">
+                        <div class="bars-default" style="height: 130px;">
+                        </div>
+                        <div class="xs-normal">
+                            Mar
+                        </div>
+                    </li>
+                    <li class="bar-container">
+                        <div class="bars-default" style="height: 40px;">
+                        </div>
+                        <div class="xs-normal">
+                            Mie
+                        </div>
+                    </li>
+                    <li class="bar-container">
+                        <div class="bars-default" style="height: 100px;">
+                        </div>
+                        <div class="xs-normal">
+                            Jue
+                        </div>
+                    </li>
+                    <li class="bar-container">
+                        <div class="bars-default" style="height: 120px">
+                        </div>
+                        <div class="xs-normal">
+                            Vie
+                        </div>
+                    </li>
+                    <li class="bar-container">
+                        <div class="bars-default" style="height: 80px;">
+                        </div>
+                        <div class="xs-normal" >
+                            Sab
+                        </div>
+                    </li>
+                    <li class="bar-container">
+                        <div class="bars-active">
+                        </div>
+                        <div class="tag-green xs-normal" style="position: absolute; bottom: 100%; transform: translateY(-50%);">
+                            3h, 00min
+                        </div>
+                        <div class="xs-semibold" style="color: var(--color-secundary-500);">
+                            Dom
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--Proximo encuentro-->
+        <div class="secciones-inicio">
+            <div style="display: flex; justify-content: space-between; align-items: center; color: var(--color-primary-950);">
+                <div class="h-4" >
+                    Proximo encuentro
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span class="sm-semibold">
+                        Ver todos
+                    </span>
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_right
+                    </span>
+                </div>
+            </div>
+            <div class="card-encuentro">
+                <div style="display: flex; gap: 16px; justify-content: space-between;">
+                    <div style="display: flex; flex-direction: column;">
+                        <span class="h-3" style="font-weight: 500;">
+                            Pasito a pasito
+                        </span>
+                        <span class="base-normal">
+                            Caminata
+                        </span>
+                    </div>
+                    <div class="tag-yellow">
+                        En progreso
+                    </div>
+                </div>
+                <div style="height: 1px; width: 100%; background-color:var(--color-gray-100);">
+                </div>
+                <div style="display: flex;">
+                    <ul style="display: flex; justify-content: space-between; padding: 0; width: 100%;">
+                        <li class="info-encuentros">
+                            <span class="material-symbols-outlined">
+                                calendar_today
+                            </span>
+                            <span class="sm-normal">
+                                18 Dic
+                            </span>
+                        </li>
+                        <li class="info-encuentros">
+                            <span class="material-symbols-outlined">
+                                schedule
+                            </span>
+                            <span class="sm-normal">
+                                7:00 PM
+                            </span>
+                        </li>
+                        <li class="info-encuentros">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <span class="sm-normal">
+                                Malecón
+                            </span>
+                        </li>
+                        <li class="info-encuentros">
+                            <span class="material-symbols-outlined">
+                                group
+                            </span>
+                            <span class="sm-subrayado" style="color: var(--color-primary-500);">
+                                6 miembros
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Insignia-->
+        <div class="secciones-inicio">
+            <div style="display: flex; justify-content: space-between; align-items: center; color: var(--color-primary-950);">
+                <div class="h-4" >
+                    Siguiente insignia
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span class="sm-semibold">
+                        Ver todos
+                    </span>
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_right
+                    </span>
+                </div>
+            </div>
+            <div class="cards-container-home">
+                <!--Card 1-->
+                <div class="card-encuentro" style="gap: 32px;">
+                    <div style="display: flex; gap: 16px; justify-content: space-between; padding-right: 16px;">
+                        <div style="display: flex; flex-direction: column; gap: 8px; max-width: 220px;">
+                            <span class="h-3" style="font-weight: 500; color: var(--color-primary-950);">
+                                Fuerza extra
+                            </span>
+                            <span class="base-normal" style="color: var(--color-primary-500);">
+                                Insignia
+                            </span>
+                            <span class="base-normal" style="color: var(--color-primary-950);">
+                                Cumple 5 retos en la semana
+                            </span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="87" viewBox="0 0 64 87" fill="none">
+                            <path d="M31.7049 0C46.6353 0.000187059 59.7533 10.4848 62.6033 25.1006C64.9591 37.1544 61.3133 47.405 52.0975 55.5703C51.6831 55.9373 51.4936 56.2291 51.4383 56.5215C51.3826 56.8166 51.4574 57.143 51.6463 57.5967L51.7 57.7266L51.6766 57.7373C53.0701 61.0317 54.4548 64.3292 55.8367 67.6279L60.034 77.6562V77.6572C60.1579 77.9605 60.3386 78.3114 60.4022 78.6523C60.4695 79.0136 60.4124 79.3833 60.076 79.7393V79.7402C59.7233 80.1116 59.3301 80.249 58.9217 80.249C58.5226 80.249 58.1139 80.1176 57.7235 79.9678V79.9668C55.179 79.0012 52.6131 78.0813 50.076 77.0781V77.0771C49.6229 76.8951 49.3366 76.8678 49.1239 76.958C48.9096 77.0489 48.723 77.2788 48.5223 77.7383L48.5213 77.7393C47.3964 80.2709 46.1358 82.7519 44.9666 85.252C44.8117 85.585 44.6432 85.9174 44.3914 86.1572C44.1311 86.4052 43.7908 86.5464 43.3153 86.5205H43.3143C42.8733 86.4942 42.5723 86.3236 42.3514 86.0693C42.138 85.8237 42.004 85.5044 41.8797 85.1973C39.7532 79.9416 37.5996 74.6842 35.4793 69.417L33.3719 64.1455C33.1822 63.6636 32.9676 63.412 32.7108 63.2734C32.4472 63.1314 32.1151 63.0938 31.6571 63.0938H31.6551C31.1896 63.0879 30.8587 63.1368 30.6004 63.2871C30.3461 63.4353 30.1387 63.6965 29.9539 64.1689V64.1699C27.2016 71.1199 24.3523 78.0347 21.5408 84.959C21.4016 85.3006 21.2614 85.6866 21.035 85.9814C20.7988 86.289 20.4672 86.502 19.9569 86.5088C19.4593 86.5154 19.1138 86.3164 18.8553 86.0254C18.6049 85.7434 18.4338 85.3722 18.2752 85.0381C17.1044 82.5822 15.882 80.1415 14.7801 77.6436L14.7791 77.6426C14.5809 77.1889 14.3921 76.9985 14.1922 76.9336C13.9843 76.8664 13.7151 76.9164 13.3094 77.0771L13.3084 77.0781C10.7235 78.0813 8.11089 79.026 5.51741 80.0039H5.51643C5.2066 80.1184 4.85246 80.273 4.50276 80.3115C4.13666 80.3517 3.76647 80.2678 3.41975 79.9219C3.06621 79.569 2.94997 79.1936 2.96663 78.8096C2.98286 78.4371 3.12487 78.0616 3.26741 77.7061L7.38167 67.4209C8.75323 63.9925 10.1293 60.5654 11.5233 57.1445C11.6973 56.7041 11.7327 56.4069 11.6619 56.1533C11.5901 55.8959 11.401 55.6542 11.0584 55.3418C1.43609 46.5788 -2.17519 35.7158 1.28694 23.1914C4.68907 10.8593 13.1713 3.34644 25.7371 0.577148C27.7014 0.144266 29.6998 0 31.7049 0ZM14.826 58.1299C14.6893 58.0891 14.5956 58.0949 14.5233 58.124C14.4488 58.154 14.3743 58.2178 14.2948 58.3369C14.215 58.4564 14.1361 58.6193 14.0506 58.8311L14.0516 58.832C11.7937 64.5235 9.49978 70.2035 7.11604 76.1318C9.51496 75.2571 11.7068 74.4465 13.8963 73.6572L14.1707 73.5605C14.7887 73.3528 15.2485 73.2772 15.6346 73.4297C16.0765 73.6044 16.3762 74.0597 16.7264 74.7705H16.7274C17.7479 76.8645 18.7679 78.9482 19.9149 81.2832C22.43 74.9155 24.8346 68.8257 27.2713 62.6709C22.9237 62.0578 18.9684 60.6863 15.3631 58.4023L15.3621 58.4014C15.1398 58.2584 14.9654 58.1716 14.826 58.1299ZM48.4647 58.29C48.3978 58.2971 48.3171 58.331 48.2127 58.3906C48.1619 58.4196 48.1096 58.4528 48.0526 58.4883L47.8729 58.5967C44.3896 60.5983 40.674 62.026 36.6678 62.6143L36.6688 62.6152C36.4806 62.6441 36.3448 62.6799 36.2498 62.7236C36.1567 62.7666 36.1119 62.8128 36.0897 62.8574C36.0669 62.9035 36.0562 62.9709 36.074 63.0781C36.0921 63.1863 36.1368 63.3222 36.2098 63.4941C37.0961 65.5738 37.8998 67.6918 38.7362 69.79C40.2285 73.5479 41.72 77.3066 43.2899 81.2744C44.4376 78.9707 45.472 76.8757 46.5272 74.7812L46.659 74.5273C46.9616 73.9618 47.2415 73.5947 47.6268 73.4434C48.0674 73.2703 48.5994 73.3972 49.3475 73.6816C51.5354 74.5062 53.7011 75.342 55.9969 76.2217C55.9995 76.1763 55.9999 76.1391 56.0018 76.1094C56.0048 76.0625 56.0043 76.0439 56.0037 76.0381L55.9998 76.0283C53.6188 70.2735 51.2252 64.5177 48.8797 58.75V58.749C48.7909 58.535 48.7084 58.4163 48.6385 58.3535C48.5752 58.2967 48.5211 58.2842 48.4647 58.29ZM31.7039 2.97461C16.0045 2.95114 3.1252 15.7919 3.10139 31.5059C3.07766 47.1603 15.8618 60.012 31.5135 60.0596C47.3571 60.107 60.2241 47.3498 60.2479 31.5527C60.2715 15.8511 47.4398 3.01034 31.7039 2.97461ZM31.6209 8.47754C37.4413 8.4394 42.7683 10.5736 46.8426 14.1201C46.9979 14.2553 47.1509 14.393 47.3026 14.5322C47.7638 14.9559 48.208 15.3977 48.6336 15.8574C52.4332 19.9606 54.7649 25.4522 54.7821 31.4932V31.4941C54.7885 34.9919 54.0136 38.3047 52.6248 41.2725C52.6058 41.3132 52.5865 41.3539 52.5672 41.3945C52.4301 41.6831 52.2871 41.9682 52.1385 42.25C52.1134 42.2977 52.0878 42.3451 52.0623 42.3926C51.2996 43.8141 50.3925 45.1461 49.3592 46.3691C49.3354 46.3974 49.3109 46.425 49.2869 46.4531C49.1891 46.5678 49.0901 46.6813 48.9901 46.7939C48.9787 46.8067 48.9682 46.8203 48.9569 46.833C48.6013 47.2319 48.2317 47.6179 47.8494 47.9912C47.8354 48.0049 47.8215 48.0186 47.8074 48.0322C47.6922 48.1442 47.5754 48.2547 47.4578 48.3643C47.4406 48.3803 47.4233 48.3961 47.4061 48.4121C47.2893 48.5203 47.1716 48.6276 47.0526 48.7334C47.0383 48.7461 47.0239 48.7588 47.0096 48.7715C46.6185 49.1174 46.2158 49.4504 45.8016 49.7695C45.7759 49.7894 45.7503 49.8094 45.7244 49.8291C45.5975 49.9261 45.4696 50.0218 45.3406 50.1162C45.335 50.1203 45.3297 50.1248 45.324 50.1289C43.7139 51.3047 41.9455 52.2766 40.0565 53.0088C40.0314 53.0185 40.0064 53.0284 39.9813 53.0381C39.8336 53.0947 39.6851 53.1494 39.536 53.2031C39.5019 53.2154 39.4676 53.2271 39.4334 53.2393C38.0605 53.7262 36.6286 54.0889 35.1502 54.3105C35.1411 54.3119 35.132 54.3131 35.1229 54.3145C34.0003 54.4814 32.8516 54.5693 31.6824 54.5693C28.2753 54.5693 25.0458 53.842 22.1405 52.5342C14.1594 48.9428 8.62509 40.9689 8.58088 31.6377C8.52066 18.8737 18.7828 8.54964 31.6082 8.47754H31.6209ZM34.2342 11.6074C33.0853 11.4633 31.9072 11.4176 30.7088 11.4766C19.639 12.0099 11.0169 21.4805 11.5867 32.4531C12.1482 43.3613 21.0402 51.6052 31.7869 51.6006C31.9574 51.6005 32.1283 51.599 32.2996 51.5947L32.5565 51.5879C43.935 50.8163 52.3887 41.571 51.7528 30.5352C51.2112 21.1273 44.4717 13.6307 35.7244 11.8525C35.4336 11.7934 35.1406 11.7406 34.8455 11.6943C34.6427 11.6625 34.4389 11.6331 34.2342 11.6074Z" fill="#88BCFF"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="background-color: var(--color-primary-50); height: 8xp; border-radius: 16px;">
+                            <div style="background-color: var(--color-secundary-500); height: 8px; width: 70%; border-radius: 16px;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Card 2-->
+                <div class="card-encuentro" style="gap: 32px;">
+                    <div style="display: flex; gap: 16px; justify-content: space-between; padding-right: 16px;">
+                        <div style="display: flex; flex-direction: column; gap: 8px; max-width: 220px;">
+                            <span class="h-3" style="font-weight: 500; color: var(--color-primary-950);">
+                                Comunidad
+                            </span>
+                            <span class="base-normal" style="color: var(--color-primary-500);">
+                                Insignia
+                            </span>
+                            <span class="base-normal" style="color: var(--color-primary-950);">
+                                Participa en 3 encuentros.
+                            </span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="87" viewBox="0 0 64 87" fill="none">
+                            <path d="M31.7049 0C46.6353 0.000187059 59.7533 10.4848 62.6033 25.1006C64.9591 37.1544 61.3133 47.405 52.0975 55.5703C51.6831 55.9373 51.4936 56.2291 51.4383 56.5215C51.3826 56.8166 51.4574 57.143 51.6463 57.5967L51.7 57.7266L51.6766 57.7373C53.0701 61.0317 54.4548 64.3292 55.8367 67.6279L60.034 77.6562V77.6572C60.1579 77.9605 60.3386 78.3114 60.4022 78.6523C60.4695 79.0136 60.4124 79.3833 60.076 79.7393V79.7402C59.7233 80.1116 59.3301 80.249 58.9217 80.249C58.5226 80.249 58.1139 80.1176 57.7235 79.9678V79.9668C55.179 79.0012 52.6131 78.0813 50.076 77.0781V77.0771C49.6229 76.8951 49.3366 76.8678 49.1239 76.958C48.9096 77.0489 48.723 77.2788 48.5223 77.7383L48.5213 77.7393C47.3964 80.2709 46.1358 82.7519 44.9666 85.252C44.8117 85.585 44.6432 85.9174 44.3914 86.1572C44.1311 86.4052 43.7908 86.5464 43.3153 86.5205H43.3143C42.8733 86.4942 42.5723 86.3236 42.3514 86.0693C42.138 85.8237 42.004 85.5044 41.8797 85.1973C39.7532 79.9416 37.5996 74.6842 35.4793 69.417L33.3719 64.1455C33.1822 63.6636 32.9676 63.412 32.7108 63.2734C32.4472 63.1314 32.1151 63.0938 31.6571 63.0938H31.6551C31.1896 63.0879 30.8587 63.1368 30.6004 63.2871C30.3461 63.4353 30.1387 63.6965 29.9539 64.1689V64.1699C27.2016 71.1199 24.3523 78.0347 21.5408 84.959C21.4016 85.3006 21.2614 85.6866 21.035 85.9814C20.7988 86.289 20.4672 86.502 19.9569 86.5088C19.4593 86.5154 19.1138 86.3164 18.8553 86.0254C18.6049 85.7434 18.4338 85.3722 18.2752 85.0381C17.1044 82.5822 15.882 80.1415 14.7801 77.6436L14.7791 77.6426C14.5809 77.1889 14.3921 76.9985 14.1922 76.9336C13.9843 76.8664 13.7151 76.9164 13.3094 77.0771L13.3084 77.0781C10.7235 78.0813 8.11089 79.026 5.51741 80.0039H5.51643C5.2066 80.1184 4.85246 80.273 4.50276 80.3115C4.13666 80.3517 3.76647 80.2678 3.41975 79.9219C3.06621 79.569 2.94997 79.1936 2.96663 78.8096C2.98286 78.4371 3.12487 78.0616 3.26741 77.7061L7.38167 67.4209C8.75323 63.9925 10.1293 60.5654 11.5233 57.1445C11.6973 56.7041 11.7327 56.4069 11.6619 56.1533C11.5901 55.8959 11.401 55.6542 11.0584 55.3418C1.43609 46.5788 -2.17519 35.7158 1.28694 23.1914C4.68907 10.8593 13.1713 3.34644 25.7371 0.577148C27.7014 0.144266 29.6998 0 31.7049 0ZM14.826 58.1299C14.6893 58.0891 14.5956 58.0949 14.5233 58.124C14.4488 58.154 14.3743 58.2178 14.2948 58.3369C14.215 58.4564 14.1361 58.6193 14.0506 58.8311L14.0516 58.832C11.7937 64.5235 9.49978 70.2035 7.11604 76.1318C9.51496 75.2571 11.7068 74.4465 13.8963 73.6572L14.1707 73.5605C14.7887 73.3528 15.2485 73.2772 15.6346 73.4297C16.0765 73.6044 16.3762 74.0597 16.7264 74.7705H16.7274C17.7479 76.8645 18.7679 78.9482 19.9149 81.2832C22.43 74.9155 24.8346 68.8257 27.2713 62.6709C22.9237 62.0578 18.9684 60.6863 15.3631 58.4023L15.3621 58.4014C15.1398 58.2584 14.9654 58.1716 14.826 58.1299ZM48.4647 58.29C48.3978 58.2971 48.3171 58.331 48.2127 58.3906C48.1619 58.4196 48.1096 58.4528 48.0526 58.4883L47.8729 58.5967C44.3896 60.5983 40.674 62.026 36.6678 62.6143L36.6688 62.6152C36.4806 62.6441 36.3448 62.6799 36.2498 62.7236C36.1567 62.7666 36.1119 62.8128 36.0897 62.8574C36.0669 62.9035 36.0562 62.9709 36.074 63.0781C36.0921 63.1863 36.1368 63.3222 36.2098 63.4941C37.0961 65.5738 37.8998 67.6918 38.7362 69.79C40.2285 73.5479 41.72 77.3066 43.2899 81.2744C44.4376 78.9707 45.472 76.8757 46.5272 74.7812L46.659 74.5273C46.9616 73.9618 47.2415 73.5947 47.6268 73.4434C48.0674 73.2703 48.5994 73.3972 49.3475 73.6816C51.5354 74.5062 53.7011 75.342 55.9969 76.2217C55.9995 76.1763 55.9999 76.1391 56.0018 76.1094C56.0048 76.0625 56.0043 76.0439 56.0037 76.0381L55.9998 76.0283C53.6188 70.2735 51.2252 64.5177 48.8797 58.75V58.749C48.7909 58.535 48.7084 58.4163 48.6385 58.3535C48.5752 58.2967 48.5211 58.2842 48.4647 58.29ZM31.7039 2.97461C16.0045 2.95114 3.1252 15.7919 3.10139 31.5059C3.07766 47.1603 15.8618 60.012 31.5135 60.0596C47.3571 60.107 60.2241 47.3498 60.2479 31.5527C60.2715 15.8511 47.4398 3.01034 31.7039 2.97461ZM31.6209 8.47754C37.4413 8.4394 42.7683 10.5736 46.8426 14.1201C46.9979 14.2553 47.1509 14.393 47.3026 14.5322C47.7638 14.9559 48.208 15.3977 48.6336 15.8574C52.4332 19.9606 54.7649 25.4522 54.7821 31.4932V31.4941C54.7885 34.9919 54.0136 38.3047 52.6248 41.2725C52.6058 41.3132 52.5865 41.3539 52.5672 41.3945C52.4301 41.6831 52.2871 41.9682 52.1385 42.25C52.1134 42.2977 52.0878 42.3451 52.0623 42.3926C51.2996 43.8141 50.3925 45.1461 49.3592 46.3691C49.3354 46.3974 49.3109 46.425 49.2869 46.4531C49.1891 46.5678 49.0901 46.6813 48.9901 46.7939C48.9787 46.8067 48.9682 46.8203 48.9569 46.833C48.6013 47.2319 48.2317 47.6179 47.8494 47.9912C47.8354 48.0049 47.8215 48.0186 47.8074 48.0322C47.6922 48.1442 47.5754 48.2547 47.4578 48.3643C47.4406 48.3803 47.4233 48.3961 47.4061 48.4121C47.2893 48.5203 47.1716 48.6276 47.0526 48.7334C47.0383 48.7461 47.0239 48.7588 47.0096 48.7715C46.6185 49.1174 46.2158 49.4504 45.8016 49.7695C45.7759 49.7894 45.7503 49.8094 45.7244 49.8291C45.5975 49.9261 45.4696 50.0218 45.3406 50.1162C45.335 50.1203 45.3297 50.1248 45.324 50.1289C43.7139 51.3047 41.9455 52.2766 40.0565 53.0088C40.0314 53.0185 40.0064 53.0284 39.9813 53.0381C39.8336 53.0947 39.6851 53.1494 39.536 53.2031C39.5019 53.2154 39.4676 53.2271 39.4334 53.2393C38.0605 53.7262 36.6286 54.0889 35.1502 54.3105C35.1411 54.3119 35.132 54.3131 35.1229 54.3145C34.0003 54.4814 32.8516 54.5693 31.6824 54.5693C28.2753 54.5693 25.0458 53.842 22.1405 52.5342C14.1594 48.9428 8.62509 40.9689 8.58088 31.6377C8.52066 18.8737 18.7828 8.54964 31.6082 8.47754H31.6209ZM34.2342 11.6074C33.0853 11.4633 31.9072 11.4176 30.7088 11.4766C19.639 12.0099 11.0169 21.4805 11.5867 32.4531C12.1482 43.3613 21.0402 51.6052 31.7869 51.6006C31.9574 51.6005 32.1283 51.599 32.2996 51.5947L32.5565 51.5879C43.935 50.8163 52.3887 41.571 51.7528 30.5352C51.2112 21.1273 44.4717 13.6307 35.7244 11.8525C35.4336 11.7934 35.1406 11.7406 34.8455 11.6943C34.6427 11.6625 34.4389 11.6331 34.2342 11.6074Z" fill="#88BCFF"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div style="background-color: var(--color-primary-50); height: 8xp; border-radius: 16px;">
+                            <div style="background-color: var(--color-secundary-500); height: 8px; width: 70%; border-radius: 16px;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Retos-->
+        <div class="secciones-inicio">
+            <div style="display: flex; justify-content: space-between; align-items: center; color: var(--color-primary-950);">
+                <div class="h-4" >
+                    Siguiente reto
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span class="sm-semibold">
+                        Ver todos
+                    </span>
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_right
+                    </span>
+                </div>
+            </div>
+            <div class="cards-container-home">
+                <!--Card 1-->
+                <div class="card-retos">
+                    <div class="container-img-retos">
+                        <div class="img-retos">
+                            <img src="../../Recursos/Retos/Retos 1.png" alt="retos1">
+                        </div>
+                    </div>
+                    <div style="gap: 8px; display: flex; flex-direction: column;">
+                        <div class="base-semibold" style="color: var(--color-primary-900); text-align: center;">
+                            Sentadilla
+                        </div>
+                        <div class="sm-normal" style="color: var(--color-gray-900); text-align: center;">
+                            Activa tus piernas y despierta tu energía.
+                        </div>
+                    </div>                 
+                </div>
+                <!--Card 2-->
+                <div class="card-retos">
+                    <div class="container-img-micro">
+                        <div class="img-retos">
+                            <img src="../../Recursos/Retos/escaleras.png" alt="micro1">
+                        </div>
+                    </div>
+                    <div style="gap: 8px; display: flex; flex-direction: column;">
+                        <div class="base-semibold" style="color: var(--color-primary-900); text-align: center;">
+                            Subir Escaleras
+                        </div>
+                        <div class="sm-normal" style="color: var(--color-gray-900); text-align: center;">
+                            Libera tensión y mejora tu flexibilidad.
+                        </div>
+                    </div>                 
+                </div>
+                <!--Card 3-->
+                <div class="card-retos">
+                    <div class="container-img-retos">
+                        <div class="img-retos">
+                            <img src="../../Recursos/Retos/Estirar.png" alt="retos1">
+                        </div>
+                    </div>
+                    <div style="gap: 8px; display: flex; flex-direction: column;">
+                        <div class="base-semibold" style="color: var(--color-primary-900); text-align: center;">
+                            Estira las piernas
+                        </div>
+                        <div class="sm-normal" style="color: var(--color-gray-900); text-align: center;">
+                            Suaviza tus músculos y gana movilidad.
+                        </div>
+                    </div>                 
+                </div>
+                <!--Card 4-->
+                <div class="card-retos">
+                    <div class="container-img-micro">
+                        <div class="img-retos">
+                            <img src="../../Recursos/Retos/caminata.png" alt="micro1">
+                        </div>
+                    </div>
+                    <div style="gap: 8px; display: flex; flex-direction: column;">
+                        <div class="base-semibold" style="color: var(--color-primary-900); text-align: center;">
+                            Caminata en llamadas
+                        </div>
+                        <div class="sm-normal" style="color: var(--color-gray-900); text-align: center;">
+                            Convierte tus llamadas en movimiento
+                        </div>
+                    </div>                 
+                </div>
+                <!--Card 5-->
+                <div class="card-retos">
+                    <div class="container-img-retos">
+                        <div class="img-retos">
+                            <img src="../../Recursos/Retos/golpe.png" alt="retos1">
+                        </div>
+                    </div>
+                    <div style="gap: 8px; display: flex; flex-direction: column;">
+                        <div class="base-semibold" style="color: var(--color-primary-900); text-align: center;">
+                            Golpe lateral
+                        </div>
+                        <div class="sm-normal" style="color: var(--color-gray-900); text-align: center;">
+                            Energiza tu centro y coordina mejor.
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+        </div>
+        <!--Grupos-->
+        <div class="secciones-inicio">
+            <div style="display: flex; justify-content: space-between; align-items: center; color: var(--color-primary-950);">
+                <div class="h-4" >
+                    Grupos
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span class="sm-semibold">
+                        Ver todos
+                    </span>
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_right
+                    </span>
+                </div>
+            </div>
+            <div class="cards-container-home">
+                <!--Card 1-->
+                <div class="card-grupos">
+                    <div class="card-grupos-img">
+                        <img src="../../Recursos/Grupos/Arena.png" alt="Grupo_arena" style="width: 100%;">
+                    </div> 
+                    <div class="card-grupos-info">
+                        <div class="h-5">
+                            Pura arena
+                        </div>
+                        <div class="xs-normal">
+                            Voleibol
+                        </div>
+                        <div class="xs-italic" style="color: var(--color-primary-500);">
+                            10 miembros
+                        </div>
+                    </div>               
+                </div>
+                <!--Card 2-->
+                <div class="card-grupos">
+                    <div class="card-grupos-img">
+                        <img src="../../Recursos/Grupos/cicloamigo.png" alt="Grupo_arena" style="width: 100%;">
+                    </div> 
+                    <div class="card-grupos-info">
+                        <div class="h-5">
+                            Cicloamigos
+                        </div>
+                        <div class="xs-normal">
+                            Ciclismo
+                        </div>
+                        <div class="xs-italic" style="color: var(--color-primary-500);">
+                            10 miembros
+                        </div>
+                    </div>               
+                </div>
+                <!--Card 3-->
+                <div class="card-grupos">
+                    <div class="card-grupos-img">
+                        <img src="../../Recursos/Grupos/futbol.png" alt="Grupo_arena" style="width: 100%;">
+                    </div> 
+                    <div class="card-grupos-info">
+                        <div class="h-5">
+                            Fútbol y risas
+                        </div>
+                        <div class="xs-normal">
+                            Futbol
+                        </div>
+                        <div class="xs-italic" style="color: var(--color-primary-500);">
+                            10 miembros
+                        </div>
+                    </div>               
+                </div>
+                <!--Card 4-->
+                <div class="card-grupos">
+                    <div class="card-grupos-img">
+                        <img src="../../Recursos/Grupos/pasito.png" alt="Grupo_arena" style="width: 100%;">
+                    </div> 
+                    <div class="card-grupos-info">
+                        <div class="h-5">
+                            Pasito a Pasito
+                        </div>
+                        <div class="xs-normal">
+                            Caminata
+                        </div>
+                        <div class="xs-italic" style="color: var(--color-primary-500);">
+                            10 miembros
+                        </div>
+                    </div>               
+                </div>
+                <!--Card 5-->
+                <div class="card-grupos">
+                    <div class="card-grupos-img">
+                        <img src="../../Recursos/Grupos/ruedas libres.png" alt="Grupo_arena" style="width: 100%;">
+                    </div> 
+                    <div class="card-grupos-info">
+                        <div class="h-5">
+                            Ruedas libres
+                        </div>
+                        <div class="xs-normal">
+                            Patinaje
+                        </div>
+                        <div class="xs-italic" style="color: var(--color-primary-500);">
+                            10 miembros
+                        </div>
+                    </div>               
+                </div>
+                <!--Card 6-->
+                <div class="card-grupos">
+                    <div class="card-grupos-img">
+                        <img src="../../Recursos/Grupos/saques.png" alt="Grupo_arena" style="width: 100%;">
+                    </div> 
+                    <div class="card-grupos-info">
+                        <div class="h-5">
+                            Saques y remartes
+                        </div>
+                        <div class="xs-normal">
+                            Voleibol
+                        </div>
+                        <div class="xs-italic" style="color: var(--color-primary-500);">
+                            10 miembros
+                        </div>
+                    </div>               
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <footer style="width: 450px; position: fixed; bottom: 16px; background-color: var(--color-primary-900); left: 50%;
+    transform: translateX(-50%); border-radius: 16px;">
+        <nav>
+            <ul style="display: flex; gap: 16px; justify-content: center; align-items: flex-end; padding-inline: 16px; padding-block: 12px; flex-shrink: 0; color: var(--color-primary-300); margin: 0;">
+                <li style="display: flex; flex-direction: column; gap: 8px; justify-content: center; align-items: center; flex: 1;">
+                    <span class="material-symbols-outlined" style="display: flex; padding: 16px; border-radius: 50px; background-color: var(--color-secundary-500); color: var(--color-primary-950);">
+                        home
+                    </span>
+                    <span style="font-family: 'inter'; font-weight: 600; font-variation-settings: 'FILL' 1;">
+                        Home
+                    </span>
+                </li>
+                <li style="display: flex; flex-direction: column; gap: 8px; justify-content: center; align-items: center; flex: 1;">
+                    <span class="material-symbols-outlined" style="display: flex; padding: 8px; border-radius: 50px; background-color: var(--color-primary-200); color: var(--color-primary-950);">
+                        trophy
+                    </span>
+                    <span style="font-family: 'inter'; font-weight: 400;">
+                        Retos
+                    </span>
+                </li>
+                <li style="display: flex; flex-direction: column; gap: 8px; justify-content: center; align-items: center; flex: 1;">
+                    <span class="material-symbols-outlined" style="display: flex; padding: 8px; border-radius: 50px; background-color: var(--color-primary-200); color: var(--color-primary-950);">
+                        group
+                    </span>
+                    <span style="font-family: 'inter'; font-weight: 400;">
+                        Grupos
+                    </span>
+                </li>
+                <li style="display: flex; flex-direction: column; gap: 8px; justify-content: center; align-items: center; flex: 1;">
+                    <span class="material-symbols-outlined" style="display: flex; padding: 8px; border-radius: 50px; background-color: var(--color-primary-200); color: var(--color-primary-950);">
+                        auto_stories
+                    </span>
+                    <span style="font-family: 'inter'; font-weight: 400;">
+                        Educacion
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <!--funcionamiento del scroll-->
+    <script>
+        const sections = document.querySelectorAll(".cards-container-home");
+
+        sections.forEach((section) => {
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        section.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            startX = e.pageX - section.offsetLeft;
+            scrollLeft = section.scrollLeft;
+
+            section.style.cursor = "grabbing";
+        });
+
+        section.addEventListener("mouseleave", () => {
+            isDragging = false;
+            section.style.cursor = "grab";
+        });
+
+        section.addEventListener("mouseup", () => {
+            isDragging = false;
+            section.style.cursor = "grab";
+        });
+
+        section.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+
+            e.preventDefault();
+
+            const x = e.pageX - section.offsetLeft;
+            const walk = (x - startX) * 2;
+
+            section.scrollLeft = scrollLeft - walk;
+        });
+        });
+    </script>
+    <!--Saludo dependiendo de la hora-->
+    <script>
+        const saludo = document.getElementById("saludo");
+
+        const hora = new Date().getHours();
+
+        if (hora >= 5 && hora < 12) {
+        saludo.textContent = "Buenos días";
+        } else if (hora >= 12 && hora < 18) {
+        saludo.textContent = "Buenas tardes";
+        } else {
+        saludo.textContent = "Buenas noches";
+        }
+    </script>
+    <!--La idea es que sea variable el nombre-->
+    <script>
+        const nombre = localStorage.getItem("nombreUsuario");
+
+        document.getElementById("nombreUsuario").textContent =
+        nombre || "Usuario";
+    </script>
+    <script>
+        document.getElementById("nombreUsuario").textContent =
+        localStorage.getItem("nombreUsuario") || "Usuario";
+    </script>
+
+</body>
+</html>

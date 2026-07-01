@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wemove-inicio</title>
+    <link rel="icon" href="../../Recursos/FavIcon/Wemove.png" type="image/png">
+    <link rel="stylesheet" href="../../Estilos/Componentes/StylesWemove.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+
+    <script>
+        const navigation = performance.getEntriesByType("navigation")[0];
+
+        if (navigation && navigation.type === "reload") {
+        window.location.replace("Carga_inicio.html");
+        }
+    </script>    
+</head>
+<body class="background page-login">
+    <div class="drawer-overlay"></div>
+        <!--Imagen-->
+        <div style="display: flex; justify-content: center;">  
+            <img src="../../Recursos/Login/Frame 54.png" alt="IMG Wemove" >
+        </div>
+    </div>
+    <!--Caja de Texto y dots-->
+    <div style="gap:16px; display: flex; flex-direction: column;">
+        <h2 class="titles_wizard">
+            Transforma tu energía con pequeños pasos.
+        </h2>
+    </div>
+    <!--boton-->
+    <div style="display: flex; justify-content: center; flex-direction:column; gap: 16px;">
+        <div style="display: flex; flex: 1;">
+            <button class="btn_drawer_fill" style="text-decoration: none; width: 100%; height: 42px;">
+                <span>
+                    Iniciar sesion
+                </span>
+            </button>
+        </div>
+        <div style="display: flex; flex: 1;">
+            <button class="btn_primary_outline" style="text-decoration: none; width: 100%; height: 42px;">
+                <span>
+                    Registrarse
+                </span>
+            </button>
+        </div>
+    </div>
+    <!--Terminos y condiciones-->
+    <div style="display: flex; justify-content: center; flex-direction:column; gap: 16px; max-width: 85%; margin: auto;">
+        <p style="text-align: center; color: var(--color-primary-900); font-family: 'inter'; font-size: 14px;">
+            Al continuar, aceptas los <span style="text-decoration: underline; font-weight: 600;">Términos de servicio</span> y la <span style="text-decoration: underline; font-weight: 600;">Política de privacidad de Wemove.</span>
+        </p>
+    </div>
+
+    <!--Prueba Drawer-->
+    <div class="drawer_content">
+        <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+            <div class="sheet-handle">
+                
+            </div>
+            <h2 class="titles_wizard">
+                ¡Bienvenido de nuevo!
+            </h2>
+            <p  class="p_wizard" style="max-width: 70%; text-align: center; display: flex;justify-content: center;">
+                Cada día cuenta, hoy no será la excepción.
+            </p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap:16px">
+            <form style="display: flex; flex-direction: column; gap: 16px;">
+                <!--Inputs de inicio-->
+                <!--El siguiente input lo colocaré en tipo text para hacer la variable del nombre, luego haré el servicio del email-->
+                <input type="text" placeholder="Escribe el nombre" id="nombre" class="inputs_login">
+                <input type="password" placeholder="Escriba su contraseña" class="inputs_login">
+            </form>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="display: flex; gap: 4px; align-items: center;">
+                    <input type="checkbox"> <span style="font-family: inter; font-size: 14px; color: var(--color-primary-950); font-weight: 500;">Recuérdame</span>
+                </div>
+                
+                <a href="#" style="color: var(--color-primary-600); font-weight: 600; font-family: 'inter'; font-size: 14px;">Olvido su contraseña?</a>
+            </div>
+        </div>
+        <!--Botones-->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; flex: 1;">
+                <a  href="../Home/Home.html" class="btn_primary_fill" style="text-decoration: none; width: 100%; height: 42px;" id="btn-ingresar">
+                    <span>
+                        Iniciar sesion
+                    </span>
+                </a>
+            </div>
+            <div style="display: flex; flex: 1;">
+                <button class="btn_drawer_outline" style="text-decoration: none; width: 100%; height: 42px;">
+                    <span>
+                        Regresar
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; padding-block: 20px;">
+            <span style="font-family: inter; font-size: 14px; font-weight: 400;">
+                Ingresar con
+            </span>
+            <div style="display: flex; flex-direction: row; gap: 20px;">
+                <img src="../../Recursos/Login/Social Icons.png" alt="Facebook">
+                <img src="../../Recursos/Login/Social Icons-1.png" alt="Google">
+            </div>
+            <div>
+                <span style="font-family: inter; font-size: 14px; color: var(--color-primary-950);">¿No tienes cuenta?</span>
+                <a href="#" style="color: var(--color-primary-900); font-family: 'inter'; font-size: 14px; text-decoration: none; font-weight: 500;"> Crear cuenta</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        // Selección de elementos mediante clases
+        const openBtn = document.querySelector('.btn_drawer_fill');
+        const closeBtn = document.querySelector('.btn_drawer_outline');
+        const drawer = document.querySelector('.drawer_content');
+        const overlay = document.querySelector('.drawer-overlay');
+
+        // Función para alternar el estado
+        function toggleDrawer() {
+            drawer.classList.toggle('is-active');
+            overlay.classList.toggle('is-active');
+        }
+
+        // Asignación de eventos
+        openBtn.addEventListener('click', toggleDrawer);
+        closeBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+    </script>
+
+    <script>
+        const boton = document.getElementById("btn-ingresar");
+
+        boton.addEventListener("click", () => {
+        const nombre = document.getElementById("nombre").value;
+
+        localStorage.setItem("nombreUsuario", nombre);
+
+        window.location.href = "../Home/Home.html";
+        });
+    </script>
+</body>
+</html>

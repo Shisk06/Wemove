@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wemove-inicio</title>
+    <link rel="icon" href="../../Recursos/FavIcon/Wemove.png" type="image/png">
+    <link rel="stylesheet" href="../../Estilos/Componentes/StylesWemove.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Cada que refresque la pagina regresa a la animacion de wemove-->
+    <script>
+        const navigation = performance.getEntriesByType("navigation")[0];
+
+        if (navigation && navigation.type === "reload") {
+        window.location.replace("index.html");
+        }
+    </script>
+    
+</head>
+<body class="background page-container">
+    <!--Omitir-->
+    <div style="gap: 150px; display: flex; flex-direction: column;">
+        <div style="justify-content: end; display: flex;">
+            <button class="btn_primary_ghost" style="padding-inline: 0%; max-width: fit-content;" >
+                <span>
+                    Omitir
+                </span>
+                <div class="material-symbols-outlined">
+                    chevron_right
+                </div>
+            </button>
+        </div>
+        <!--Imagen-->
+        <div style="display: flex; justify-content: center;">  
+            <img src="../../Recursos/Login/Rectangle 16.png" alt="IMG Wemove" >
+        </div>
+    </div>
+    <!--Caja de Texto y dots-->
+    <div style="gap:16px; display: flex; flex-direction: column;">
+        <h2 class="titles_wizard">
+            ¡Bienvenido a tu viaje de movimiento!
+        </h2>
+        <p class="p_wizard">
+            En Wemove encontrarás retos diarios y microacciones adaptadas a ti. Cada pequeño paso te acerca a grandes logros.
+        </p>
+        <div style="display: flex; flex-direction: row; gap: 8px; justify-content: center;">
+            <span class="dots_active">
+            </span>
+            <span class="dots_default">
+            </span>
+            <span class="dots_default">
+            </span>
+        </div>
+    </div>
+    <!--boton-->
+
+    <div style="display: flex; justify-content: end;">
+        <a href="Login_comunidad.html" class="btn_primary_fill" style="text-decoration: none; animation: ease-out 3s forwards;">
+            <span>
+                Siguiente
+            </span>
+            <div class="material-symbols-outlined">
+                chevron_right
+            </div>
+        </a>
+    </div>
+</body>
+</html>

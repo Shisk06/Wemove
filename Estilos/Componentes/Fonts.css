@@ -1,0 +1,324 @@
+/*Fuente POPPINS*/
+@font-face {
+    font-family: poppins;
+    src: url(../../Recursos/Fonts/Poppins/Poppins-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: poppins;
+    src: url(../../Recursos/Fonts/Poppins/Poppins-Medium.ttf);
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: poppins;
+    src: url(../../Recursos/Fonts/Poppins/Poppins-SemiBold.ttf);
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: poppins;
+    src: url(../../Recursos/Fonts/Poppins/Poppins-Bold.ttf);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/*Fuente inter*/
+@font-face {
+    font-family: Inter;
+    src: url(../../Recursos/Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: Inter;
+    src: url(../../Recursos/Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: Inter;
+    src: url(../../Recursos/Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: Inter;
+    src: url(../../Recursos/Fonts/Poppins/Poppins-Bold.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+/* Headings*/
+.h-1{
+    font-family: 'poppins';
+    font-size: 36px;
+    font-weight: 600;
+}
+.h-2{
+    font-family: 'poppins';
+    font-size: 30px;
+    font-weight: 600;
+}
+.h-3{
+    font-family: 'poppins';
+    font-size: 24px;
+    font-weight: 600;
+}
+.h-4{
+    font-family: 'poppins';
+    font-size: 20px;
+    font-weight: 600;
+}
+.h-5{
+    font-family: 'poppins';
+    font-size: 18px;
+    font-weight: 600;
+}
+.h-6{
+    font-family: 'poppins';
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*Textos*/
+
+/* XXL - 24px*/
+.xxl-normal{
+    font-family: 'inter';
+    font-size: 24px;
+    font-weight: 400;
+}
+.xxl-medium{
+    font-family: 'inter';
+    font-size: 24px;
+    font-weight: 500;
+}
+.xxl-semibold{
+    font-family: 'inter';
+    font-size: 24px;
+    font-weight: 600;
+}
+.xxl-bold{
+    font-family: 'inter';
+    font-size: 24px;
+    font-weight: 700;
+}
+.xxl-italic{
+    font-family: 'inter';
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+}
+.xxl-tachado{
+    font-family: 'inter';
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.xxl-subrayado{
+    font-family: 'inter';
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* XL - 20px*/
+.xl-normal{
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 400;
+}
+.xl-medium{
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 500;
+}
+.xl-semibold{
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 600;
+}
+.xl-bold{
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 700;
+}
+.xl-italic{
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+}
+.xl-tachado{
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.xl-subrayado{
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* Lg - 18px*/
+.lg-normal{
+    font-family: 'inter';
+    font-size: 18px;
+    font-weight: 400;
+}
+.lg-medium{
+    font-family: 'inter';
+    font-size: 18px;
+    font-weight: 500;
+}
+.lg-semibold{
+    font-family: 'inter';
+    font-size: 18px;
+    font-weight: 600;
+}
+.lg-bold{
+    font-family: 'inter';
+    font-size: 18px;
+    font-weight: 700;
+}
+.lg-italic{
+    font-family: 'inter';
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+}
+.lg-tachado{
+    font-family: 'inter';
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.lg-subrayado{
+    font-family: 'inter';
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* base - 16px*/
+.base-normal{
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 400;
+}
+.base-medium{
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 500;
+}
+.base-semibold{
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 600;
+}
+.base-bold{
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 700;
+}
+.base-italic{
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+}
+.base-tachado{
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.base-subrayado{
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* sm- 14px*/
+.sm-normal{
+    font-family: 'inter';
+    font-size: 14px;
+    font-weight: 400;
+}
+.sm-medium{
+    font-family: 'inter';
+    font-size: 14px;
+    font-weight: 500;
+}
+.sm-semibold{
+    font-family: 'inter';
+    font-size: 14px;
+    font-weight: 600;
+}
+.sm-bold{
+    font-family: 'inter';
+    font-size: 14px;
+    font-weight: 700;
+}
+.sm-italic{
+    font-family: 'inter';
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+}
+.sm-tachado{
+    font-family: 'inter';
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.sm-subrayado{
+    font-family: 'inter';
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* xs- 12px*/
+.xs-normal{
+    font-family: 'inter';
+    font-size: 12px;
+    font-weight: 400;
+}
+.xs-medium{
+    font-family: 'inter';
+    font-size: 12px;
+    font-weight: 500;
+}
+.xs-semibold{
+    font-family: 'inter';
+    font-size: 12px;
+    font-weight: 600;
+}
+.xs-bold{
+    font-family: 'inter';
+    font-size: 12px;
+    font-weight: 700;
+}
+.xs-italic{
+    font-family: 'inter';
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+}
+.xs-tachado{
+    font-family: 'inter';
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.xs-subrayado{
+    font-family: 'inter';
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+}

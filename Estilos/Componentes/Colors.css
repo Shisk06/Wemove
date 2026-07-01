@@ -1,0 +1,82 @@
+:root{
+    --color-primary: #082EFA;
+    --color-primary-50: #E8F4FF;
+    --color-primary-100: #D6EAFF;
+    --color-primary-200: #B5D8FF;
+    --color-primary-300: #88BCFF;
+    --color-primary-400: #5992FF;
+    --color-primary-500: #3468FF;
+    --color-primary-600: #1139FF;
+    --color-primary-700: #082EFA;
+    --color-primary-800: #0A2BCD;
+    --color-primary-900: #0B25A7;
+    --color-primary-950: #021046;
+
+    --color-secundary: #6D8B00;
+    --color-secundary-50: #FEFFE4;
+    --color-secundary-100: #FBFFC4;
+    --color-secundary-200: #F5FF90;
+    --color-secundary-300: #E9FF51;
+    --color-secundary-400: #D6FE06;
+    --color-secundary-500: #BBE500;
+    --color-secundary-600: #91B700;
+    --color-secundary-700: #6D8B00;
+    --color-secundary-800: #566D07;
+    --color-secundary-900: #495C0B;
+    --color-secundary-950: #253400;
+
+    --color-yellow: #B75506;
+    --color-yellow-50: #FFFBEB;
+    --color-yellow-100: #FFF4C6;
+    --color-yellow-200: #FFE888;
+    --color-yellow-300: #FFD74A;
+    --color-yellow-400: #FFC730;
+    --color-yellow-500: #F9A107;
+    --color-yellow-600: #DD7902;
+    --color-yellow-700: #B75506;
+    --color-yellow-800: #94400C;
+    --color-yellow-900: #7A350D;
+    --color-yellow-950: #461B02;
+    
+    --color-green: #158034;
+    --color-green-50: #F0FDF3;
+    --color-green-100: #DCFCE4;
+    --color-green-200: #BBF7CB;
+    --color-green-300: #86EFA3;
+    --color-green-400: #4BDD74;
+    --color-green-500: #23C451;
+    --color-green-600: #169E3D;
+    --color-green-700: #158034;
+    --color-green-800: #16652E;
+    --color-green-900: #145328;
+    --color-green-950: #052E13;
+    
+    --color-red: #E60023;
+    --color-red-50: #FFF0F2;
+    --color-red-100: #FFDDE2;
+    --color-red-200: #FFC1CA;
+    --color-red-300: #FF95A5;
+    --color-red-400: #FF5972;
+    --color-red-500: #FF2647;
+    --color-red-600: #FC062B;
+    --color-red-700: #E60023;
+    --color-red-800: #AF051F;
+    --color-red-900: #900C20;
+    --color-red-950: #50000C;
+    
+    --color-gray: #7B7B7B;
+    --color-gray-50: #F7F7F7;
+    --color-gray-100: #EDEDED;
+    --color-gray-200: #DFDFDF;
+    --color-gray-300: #C8C8C8;
+    --color-gray-400: #ADADAD;
+    --color-gray-500: #A0A0A0;
+    --color-gray-600: #888888;
+    --color-gray-700: #7B7B7B;
+    --color-gray-800: #676767;
+    --color-gray-900: #545454;
+    --color-gray-950: #363636;
+
+    --color-background: #F1F6FF;
+    
+}

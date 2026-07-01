@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wemove</title>
+    <link rel="icon" href="../../Recursos/FavIcon/Wemove.png" type="image/png">
+    <!-- Cada que refresque la pagina regresa a la animacion de wemove-->
+    <script>
+        const navigation = performance.getEntriesByType("navigation")[0];
+
+        if (navigation && navigation.type === "reload") {
+        window.location.replace("carga_inicio.html");
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video de carga-->
+    <video id="introVideo" autoplay muted playsinline>
+        <source src="../../Recursos/Login/Carga.mp4" type="video/mp4">
+    </video>
+    <!--Animacion que envia a la primera pagina-->
+    <script>
+        const video = document.getElementById('introVideo');
+
+        video.addEventListener('ended', () => {
+            window.location.href = 'Login_wemove.html';
+        });
+    </script>
+
+</body>
+</html>
