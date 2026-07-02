@@ -18,12 +18,14 @@
     </script>    
 </head>
 <body class="background page-login">
-    <div class="drawer-overlay"></div>
+    <div class="drawer-overlay">
+
+    </div>
         <!--Imagen-->
         <div style="display: flex; justify-content: center;">  
             <img src="../../Recursos/Login/Frame 54.png" alt="IMG Wemove" >
         </div>
-    </div>
+    
     <!--Caja de Texto y dots-->
     <div style="gap:16px; display: flex; flex-direction: column;">
         <h2 class="titles_wizard">
@@ -113,8 +115,7 @@
             </div>
         </div>
     </div>
-
-    
+    <!--script para el drawer-->
     <script>
         // Selección de elementos mediante clases
         const openBtn = document.querySelector('.btn_drawer_fill');
@@ -133,7 +134,7 @@
         closeBtn.addEventListener('click', toggleDrawer);
         overlay.addEventListener('click', toggleDrawer);
     </script>
-
+    <!--Script para tener el nombre de usuario-->
     <script>
         const boton = document.getElementById("btn-ingresar");
 

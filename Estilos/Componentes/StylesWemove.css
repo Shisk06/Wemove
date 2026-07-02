@@ -133,7 +133,7 @@
     bottom: 0;
     left: 0;
     background-color: #ffffff;
-    z-index: 1001;
+    z-index: 10001;
     display: flex;
     flex-direction: column;
     max-height: 715px;
@@ -165,11 +165,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.25);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
+    z-index: 10000;
 }
 .drawer-overlay.is-active {
     opacity: 1;
@@ -447,4 +447,45 @@
     gap: 4px;
     padding: 16px;
     box-sizing: border-box;
+}
+
+.btn_drawer_link{
+    display: flex;
+    background-color: transparent;
+    color: var(--color-primary-900);
+    font-family: 'inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px; 
+    text-align: center;
+    gap: 6px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+}
+.tag_miembros{
+    display: flex;
+    background-color: var(--color-primary-200);
+    color: var(--color-primary-950);
+    border-radius: 4px;
+    padding: 4px 10px;
+
+}
+
+.page-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10000;
+
+}
+.page-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
 }

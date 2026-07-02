@@ -10,6 +10,8 @@
 
 </head>
 <body class="page-container" style="gap: 0; background-color: var(--color-background); height: 100%;">
+    <div class="page-overlay"></div>
+
     <header style="display: flex; position: sticky; top: 0; z-index: 1000; background-color: var(--color-background); width: 100%;">
         <div style="display: flex; flex-direction: row; padding-block: 12px; align-items: center; gap: 16px; flex-shrink: 0; width: 100%;">
             <img src="../../Recursos/Avateres/Rectangle 1.png" style="height: 50px; width: 50px;" alt="Foto de perfil">
@@ -234,7 +236,7 @@
                             <span class="material-symbols-outlined">
                                 group
                             </span>
-                            <span class="sm-subrayado" style="color: var(--color-primary-500);">
+                            <span class="btn_drawer_link" >
                                 6 miembros
                             </span>
                         </li>
@@ -530,7 +532,47 @@
                 </div>
             </div>
         </div>
-        
+        <!--drawer-->
+        <div class="drawer_content" style="justify-content:flex-start; max-height: 450px; padding-inline:32px">
+
+            <div style="display: flex; flex-direction: column; gap: 20px; align-items: start;">
+                <div style="display: flex; box-sizing: border-box; justify-content: center; align-items: center; position: fixed; top: 0; left: 50%; height: 20px;" >
+                    <div class="sheet-handle">    
+                    </div> 
+                </div>
+                
+                <!--titulo del drawer+tag-->
+                <div style="display: flex; justify-content: center; align-items: center; gap: 16px">
+                    <h2 class="titles_wizard" style="text-align:start; font-size: 18px">
+                        Miembros
+                    </h2>
+                    <div class="tag_miembros">
+                        6
+                    </div>
+                </div>
+                    
+            
+            </div>
+         
+            <!--Botones-->
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; flex: 1;">
+                    <a  href="../Home/Home.html" class="btn_primary_fill" style="text-decoration: none; width: 100%; height: 42px;" id="btn-ingresar">
+                        <span>
+                            Iniciar sesion
+                        </span>
+                    </a>
+                </div>
+                <div style="display: flex; flex: 1;">
+                    <button class="btn_drawer_outline" style="text-decoration: none; width: 100%; height: 42px;">
+                        <span>
+                            Regresar
+                        </span>
+                    </button>
+                </div>
+            </div>
+           
+        </div>
         
     </div>
     <footer style="width: 450px; position: fixed; bottom: 16px; background-color: var(--color-primary-900); left: 50%;
@@ -635,6 +677,26 @@
     <script>
         document.getElementById("nombreUsuario").textContent =
         localStorage.getItem("nombreUsuario") || "Usuario";
+    </script>
+
+    <!-- drawer-->
+    <script>
+        // Selección de elementos mediante clases
+        const openBtn = document.querySelector('.btn_drawer_link');
+        const closeBtn = document.querySelector('.sheet-handle');
+        const drawer = document.querySelector('.drawer_content');
+        const overlay = document.querySelector('.page-overlay');
+
+        // Función para alternar el estado
+        function toggleDrawer() {
+            drawer.classList.toggle('is-active');
+            overlay.classList.toggle('is-active');
+        }
+
+        // Asignación de eventos
+        openBtn.addEventListener('click', toggleDrawer);
+        closeBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
     </script>
 
 </body>
