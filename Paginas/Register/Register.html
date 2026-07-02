@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wemove-Registro</title>
+    <link rel="icon" href="../../Recursos/FavIcon/Wemove.png" type="image/png">
+    <link rel="stylesheet" href="../../Estilos/Componentes/StylesWemove.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+<!---
+
+ <script>
+        const navigation = performance.getEntriesByType("navigation")[0];
+
+        if (navigation && navigation.type === "reload") {
+        window.location.replace("Carga_inicio2.html");
+        }
+    </script>  
+      
+-->
+   
+</head>
+<body class="background " style=" justify-content:center; display:flex; flex-direction:column; align-items:center; gap:20px; ">
+    <div class="drawer-overlay">
+
+    </div>
+
+    <!--Cabecera-->
+    <div style="display:flex; gap:16px; justify-content:space-between; padding: 16px 12px; width: 100%">
+        <span class="material-symbols-outlined">
+            arrow_back
+        </span>
+        <h2 class="titles_wizard">
+            Registrate
+        </h2>
+        <span class="material-symbols-outlined" style="opacity: 0;">
+            arrow_back
+        </span>
+
+    </div>
+    <!--pasos-->
+    <div style="display: flex; justify-content:space-between; height:4px; background-color: var(--color-primary-200); align-items:center; width: 250px;" id="stepsContainer">
+        <div class="steps-active" style="left: 120px;">
+
+        </div>
+        <div class="steps-default" style="left: 240px;">
+
+        </div>
+        <div class="steps-default" style="left: 360px;">
+
+        </div>
+
+    </div>
+    <!--Numero del paso-->
+    <div class="base-normal">
+        Paso 1 de 3
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; align-items:center; justify-content:center;">
+        <h3 class="h-4" style="margin:0; color: var(--color-primary-950);">
+            ¿Quien eres?
+        </h3>
+        <p class="base-normal" style="margin:0; color: var(--color-gray-800)">
+            Completa tus datos para empezar.
+        </p>
+    </div>
+    <!--imagen de perfil-->
+    <div style="position: relative; width: 120px; height: 120px; border-radius: 50%; display:flex; justify-content:center; align-items:center;">
+        
+       <img src="../../Recursos/Avatares/Sin_foto.png" alt="foto de perfil"> 
+       <div style="position: absolute; bottom: 0; right: 0; background-color: var(--color-primary-300); border-radius: 50%; padding: 2px; color: var(--color-primary-950); z-index: 1; align-items:center; justify-content:center; display:flex; width: 32px; height: 32px;">
+            <span class="material-symbols-outlined" style="font-size: 20px;">
+              
+               edit 
+            </span>
+            
+        </div>
+    </div>
+
+    
+
+    <div style="display:flex; flex-direction:column; gap:16px; width: 100%; max-width: 400px; box-sizing: border-box; padding-top: 24px;">
+        <form style="display:flex; flex-direction:column; gap:16px; width: 100%; max-width: 400px; box-sizing: border-box;">
+            <input type="text" placeholder="Nombre y apellido" class="input-primary">
+            <input type="text" placeholder="Nombre de usuario" class="input-primary">
+            <input type="email" placeholder="Correo electrónico" class="input-primary">
+            <input type="password" placeholder="Contraseña" class="input-primary">
+            <input type="password" placeholder="Confirmar contraseña" class="input-primary">
+
+            <button class="btn_drawer_fill" style="width: 100%; height: 42px;">
+                <span>
+                    Continuar
+                </span>
+            </button>
+
+        </form>
+    </div>
+
+    <!--Prueba Drawer-->
+    <div class="drawer_content">
+        
+    </div>
+    <!--script para el drawer-->
+    <script>
+        // Selección de elementos mediante clases
+        const openBtn = document.querySelector('.btn_drawer_fill');
+        const closeBtn = document.querySelector('.btn_drawer_outline');
+        const drawer = document.querySelector('.drawer_content');
+        const overlay = document.querySelector('.drawer-overlay');
+
+        // Función para alternar el estado
+        function toggleDrawer() {
+            drawer.classList.toggle('is-active');
+            overlay.classList.toggle('is-active');
+        }
+
+        // Asignación de eventos
+        openBtn.addEventListener('click', toggleDrawer);
+        closeBtn.addEventListener('click', toggleDrawer);
+        overlay.addEventListener('click', toggleDrawer);
+    </script>
+
+</body>
+</html>
