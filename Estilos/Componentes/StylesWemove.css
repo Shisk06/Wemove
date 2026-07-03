@@ -551,27 +551,24 @@
 }
 
 /* Estilo para mensajes de error (coincide con .error existente) */
-.error-message{
+.input-message{
     display: block;
-    min-height: 18px;
-    color: #D93025;
-    font-size: 13px;
-    margin-top: 6px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #D32F2F;
+    font-family: 'inter', sans-serif;
 }
 
-.error{
-    display:block;
-    min-height:18px;
-
-    color:#D93025;
-
-    font-size:13px;
-
-    margin-top:6px;
+.input-message.success{
+    color:var(--color-green-500);
 }
 
-.input-error{
+.input-message.error{
+    color: #FF2647;
+}
 
-    border:1px solid #D93025;
-
+button:disabled{
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-600);
+    cursor: not-allowed;
 }

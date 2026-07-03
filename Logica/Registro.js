@@ -1,146 +1,93 @@
+const input = document.getElementById("input");
+const boton = document.getElementById("boton");
+const mensaje = document.getElementById("mensajeNombre");
 
-// ELEMENTOS DEL FORMULARIO
-const nombreCompletoInput = document.getElementById("nombreCompleto");
-const userIDInput = document.getElementById("userID");
-const correoInput = document.getElementById("correo");
-const passwordInput = document.getElementById("password");
-const confirmarPasswordInput = document.getElementById("confirmarPassword");
+// El botón empieza deshabilitado
+boton.disabled = true;
 
-const btnRegistrar = document.getElementById("btnRegistrar");
+// Validar mientras el usuario escribe
+input.addEventListener("input", validarNombre);
 
-//errores 
-const errorNombre = document.getElementById("errorNombre");
-const errorUserID = document.getElementById("errorUserID");
-const errorCorreo = document.getElementById("errorCorreo");
-const errorPassword = document.getElementById("errorPassword");
-const errorConfirmarPassword = document.getElementById("errorConfirmarPassword");
+// Guardar cuando el usuario haga clic
+boton.addEventListener("click", registrarUsuario);
 
+function validarNombre() {
 
+    const nombre = input.value.trim();
 
-// Avatar seleccionado
-let avatarSeleccionado = "";
+    // Obtener usuarios registrados
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-// Muestra un mensaje de error asociado a un input y elemento small
-function mostrarError(inputEl, errorEl, message) {
-    if (!errorEl || !inputEl) return;
-    errorEl.textContent = message;
-    // intenta usar la variable CSS para el color si está disponible
-    try { errorEl.style.color = getComputedStyle(document.documentElement).getPropertyValue('--color-primary-900') || '#d32f2f'; } catch (e) { errorEl.style.color = '#d32f2f'; }
-    inputEl.classList.add('input-error');
+    // Limpiar mensaje anterior
+    mensaje.textContent = "";
+    mensaje.classList.remove("error", "success");
+
+    // Campo vacío
+    if (nombre === "") {
+
+        mensaje.textContent = "El nombre es obligatorio.";
+        mensaje.classList.add("error");
+
+        boton.disabled = true;
+        return false;
+
+    }
+
+    // Validar nombre repetido
+    const existe = usuarios.some(usuario =>
+        usuario.nombre.toLowerCase() === nombre.toLowerCase()
+    );
+
+    if (existe) {
+
+        mensaje.textContent = "Ese nombre ya existe.";
+        mensaje.classList.add("error");
+
+        boton.disabled = true;
+        return false;
+
+    }
+
+    // Todo correcto
+    mensaje.textContent = "Nombre disponible.";
+    mensaje.classList.add("success");
+
+    boton.disabled = false;
+
+    return true;
 }
 
-// Limpia el mensaje de error de un input
-function limpiarError(inputEl, errorEl) {
-    if (!errorEl || !inputEl) return;
-    errorEl.textContent = "";
-    inputEl.classList.remove('input-error');
-}
-//leer el formulario
-function leerFormulario() {
+function registrarUsuario(e) {
 
-    return {
+    e.preventDefault();
 
-        nombre: nombreCompletoInput.value.trim(),
+    // Validar nuevamente antes de guardar
+    if (!validarNombre()) return;
 
-        userID: userIDInput.value.trim(),
+    const nombre = input.value.trim();
 
-        correo: correoInput.value.trim().toLowerCase(),
+    // Obtener usuarios registrados
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-        password: passwordInput.value,
-
-        confirmarPassword: confirmarPasswordInput.value,
-
-        avatar: avatarSeleccionado
-
+    // Crear objeto usuario
+    const nuevoUsuario = {
+        nombre: nombre
     };
 
-}
+    // Agregar el usuario
+    usuarios.push(nuevoUsuario);
 
-//validar campos vacíos
-    function validarCamposVacios(usuario) {
+    // Guardar nuevamente
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-        if (usuario.nombre === "") {
-            mostrarError(
+    mensaje.textContent = "Usuario registrado correctamente.";
+    mensaje.classList.remove("error");
+    mensaje.classList.add("success");
 
-                nombreCompletoInput,
-                errorNombre,
-                "El nombre es obligatorio."
+    // Limpiar el input
+    input.value = "";
 
-            );
-            return false;
-        }
-
-        if (usuario.userID === "") {
-            mostrarError(
-
-                userIDInput,
-                errorUserID,
-                "El UserID es obligatorio."
-
-            );
-            return false;
-        }
-
-        if (usuario.correo === "") {
-            mostrarError(
-
-                correoInput,
-                errorCorreo,
-                "El correo es obligatorio."
-
-            );
-            return false;
-        }
-
-        if (usuario.password === "") {
-            mostrarError(
-                
-            passwordInput,
-
-            errorPassword,
-
-            "Debe contener una mayúscula."
-
-        );
-            return false;
-        }
-
-        if (usuario.confirmarPassword === "") {
-            mostrarError(
-                confirmarPasswordInput,
-                errorConfirmarPassword,
-                "Debe confirmar la contraseña."
-            );
-            return false;
-        }
-
-        if (usuario.avatar === "") {
-            mostrarError(
-                avatarInput,
-                errorAvatar,
-                "Debe seleccionar un avatar."
-            );
-            return false;
-        }
-
-        return true;
-
-    }
-
-//registro de usuario
-function registrarUsuario() {
-
-    const usuario = leerFormulario();
-
-    const formularioValido = validarCamposVacios(usuario);
-
-    if (!formularioValido) {
-        return;
-    }
-
-    console.log(usuario);
+    // Deshabilitar nuevamente el botón
+    boton.disabled = true;
 
 }
-
-//boton de registro
-btnRegistrar.addEventListener("click", registrarUsuario);
