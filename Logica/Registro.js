@@ -2,6 +2,78 @@ const input = document.getElementById("input");
 const boton = document.getElementById("boton");
 const mensaje = document.getElementById("mensajeNombre");
 
+// ==========================
+// AVATARES
+// ==========================
+
+const fotoPerfil = document.getElementById("fotoPerfil");
+const btnAbrirAvatares = document.getElementById("abrirAvatares");
+
+const sheet = document.querySelector(".sheet-avatares");
+const overlay = document.querySelector(".sheet-overlay");
+
+const avatars = document.querySelectorAll(".avatar-opcion");
+const btnAplicarAvatar = document.getElementById("btnAplicarAvatar");
+
+// Avatar por defecto
+let avatarSeleccionado = "../../Recursos/Avatares/Sin_foto.png";
+let avatarTemporal = avatarSeleccionado;
+
+
+// Abrir Sheet
+btnAbrirAvatares.addEventListener("click", () => {
+
+    avatarTemporal = avatarSeleccionado;
+    sheet.classList.add("active");
+    overlay.classList.add("active");
+    
+
+});
+
+
+// Cerrar Sheet al pulsar el fondo
+overlay.addEventListener("click", cerrarSheet);
+
+
+// Seleccionar avatar
+avatars.forEach((avatar) => {
+
+    avatar.addEventListener("click", () => {
+
+        // Quitar selección anterior
+        avatars.forEach((item) => {
+            item.classList.remove("selected");
+        });
+
+        // Marcar el avatar seleccionado
+        avatar.classList.add("selected");
+
+        // Solo guardar temporalmente
+        avatarTemporal = avatar.dataset.avatar;
+
+    });
+
+});
+
+btnAplicarAvatar.addEventListener("click", () => {
+
+    avatarSeleccionado = avatarTemporal;
+
+    fotoPerfil.src = avatarSeleccionado;
+
+    cerrarSheet();
+
+});
+
+
+// Función para cerrar el Sheet
+function cerrarSheet(){
+
+    sheet.classList.remove("active");
+    overlay.classList.remove("active");
+
+}
+
 // El botón empieza deshabilitado
 boton.disabled = true;
 
@@ -10,6 +82,8 @@ input.addEventListener("input", validarNombre);
 
 // Guardar cuando el usuario haga clic
 boton.addEventListener("click", registrarUsuario);
+
+
 
 function validarNombre() {
 
@@ -71,8 +145,18 @@ function registrarUsuario(e) {
 
     // Crear objeto usuario
     const nuevoUsuario = {
-        nombre: nombre
-    };
+
+        nombre: nombre,
+
+        userID: "",
+
+        correo: "",
+
+        password: "",
+
+        avatar: avatarSeleccionado
+
+};
 
     // Agregar el usuario
     usuarios.push(nuevoUsuario);

@@ -21,8 +21,8 @@
     -->
     
 </head>
-<body class="background " style=" justify-content:center; display:flex; flex-direction:column; align-items:center; gap:20px; ">
-    <div class="drawer-overlay">
+<body class="background " style=" justify-content:center; display:flex; flex-direction:column; align-items:center; gap:20px; box-sizing: border-box; padding: 0 16px;">
+    <div class="sheet-overlay">
 
     </div>
 
@@ -66,9 +66,14 @@
     </div>
     <!--imagen de perfil-->
     <div style="position: relative; width: 120px; height: 120px; border-radius: 50%; display:flex; justify-content:center; align-items:center;">
-        
-        <img src="../../Recursos/Avatares/Sin_foto.png" alt="foto de perfil"> 
-        <div style="position: absolute; bottom: 0; right: 0; background-color: var(--color-primary-300); border-radius: 50%; padding: 2px; color: var(--color-primary-950); z-index: 1; align-items:center; justify-content:center; display:flex; width: 32px; height: 32px;">
+        <!--imagen de perfil-->
+        <img
+            id="fotoPerfil"
+            src="../../Recursos/Avatares/Sin_foto.png"
+            alt="Foto de perfil">
+        <!--cambio de foto-->
+        <div id="abrirAvatares" class="cambiaravatar">
+
             <span class="material-symbols-outlined" style="font-size: 20px;">
                 edit 
             </span>
@@ -76,7 +81,72 @@
         </div>
     </div>
 
-    
+    <!--ventana de avatares-->
+        <div class="sheet-avatares">
+
+            <div class="sheet-indicator"></div>
+                <div style="display:flex; flex-direction:column; gap:4px; ">
+                <h3 class="h-4" style="margin:0; color: var(--color-primary-950);">
+                    Selecciona un avatar
+                </h3>
+
+                <p class="base-normal" style="color: var(--color-gray-800); margin:0;">
+                    Elige un avatar para tu perfil. Puedes cambiarlo más tarde.
+                </p>
+
+                </div>
+                
+
+            <div class="avatar-grid">
+
+                <img
+                    class="avatar-opcion"
+                    src="../../Recursos/Avatares/perfil 1.png"
+                    data-avatar="../../Recursos/Avatares/perfil 1.png"
+                    alt="Avatar 1">
+
+                <img
+                    class="avatar-opcion"
+                    src="../../Recursos/Avatares/perfil 2.png"
+                    data-avatar="../../Recursos/Avatares/perfil 2.png"
+                    alt="Avatar 2">
+
+                <img
+                    class="avatar-opcion"
+                    src="../../Recursos/Avatares/perfil 3.png"
+                    data-avatar="../../Recursos/Avatares/perfil 3.png"
+                    alt="Avatar 3">
+
+                <img
+                    class="avatar-opcion"
+                    src="../../Recursos/Avatares/perfil 4.png"
+                    data-avatar="../../Recursos/Avatares/perfil 4.png"
+                    alt="Avatar 4">
+
+                <img
+                    class="avatar-opcion"
+                    src="../../Recursos/Avatares/perfil 5.png"
+                    data-avatar="../../Recursos/Avatares/perfil 5.png"
+                    alt="Avatar 5">
+
+                <img
+                    class="avatar-opcion"
+                    src="../../Recursos/Avatares/perfil 6.png"
+                    data-avatar="../../Recursos/Avatares/perfil 6.png"
+                    alt="Avatar 6">
+
+            </div>
+
+        <div class="sheet-footer">
+                <button
+                    type="button"
+                    id="btnAplicarAvatar"
+                    class="btn_drawer_fill"
+                    style="width: 100%; max-width: 400px; box-sizing: border-box; color: var(--color-primary-950); background-color: var(--color-secundary-500);">
+                    Seleccionar foto de perfil
+                </button>
+            </div>
+        </div>
 
     <div style="display:flex; flex-direction:column; gap:12px; width: 100%; max-width: 400px; box-sizing: border-box; padding-top: 24px;">
         <form>
