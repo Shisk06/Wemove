@@ -150,10 +150,18 @@
 
     <div style="display:flex; flex-direction:column; gap:12px; width: 100%; max-width: 400px; box-sizing: border-box; padding-top: 24px;">
         <form>
+            <!--registro de nombre-->
             <div style="display:flex; flex-direction:column; gap:4px;">
-                <label for="input" class="base-normal" style="color: var(--color-gray-800);">Nombre</label>
-                <input type="text" placeholder="Escriba su nombre" id="input" class="input-primary">
-                <small class="input-message" id="mensajeNombre" style="height: 15px;"></small>
+                <label for="inputUserID" class="base-normal" style="color: var(--color-gray-800);">Nombre de usuario</label>
+                <input type="text" placeholder="Escriba su nombre de usuario" id="inputUserID" class="input-primary">
+                <small class="input-message" id="mensajeUserID" style="height: 15px;"></small>
+            </div>
+
+            <!--registro de correo-->
+            <div style="display:flex; flex-direction:column; gap:4px;">
+                <label for="inputCorreo" class="base-normal" style="color: var(--color-gray-800);">Correo electrónico</label>
+                <input type="email" placeholder="Escriba su correo electrónico" id="inputCorreo" class="input-primary">
+                <small class="input-message" id="mensajeCorreo" style="height: 15px;"></small>
             </div>
 
             <button type="submit" class="btn_drawer_fill" style="width: 100%; margin-top: 24px;" id="boton">Siguiente paso</button>

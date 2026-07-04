@@ -1,7 +1,10 @@
-const input = document.getElementById("input");
-const boton = document.getElementById("boton");
-const mensaje = document.getElementById("mensajeNombre");
+const inputUserID = document.getElementById("inputUserID");
+const inputCorreo = document.getElementById("inputCorreo");
 
+const mensajeUserID = document.getElementById("mensajeUserID");
+const mensajeCorreo = document.getElementById("mensajeCorreo");
+
+const boton = document.getElementById("boton");
 // ==========================
 // AVATARES
 // ==========================
@@ -78,67 +81,117 @@ function cerrarSheet(){
 boton.disabled = true;
 
 // Validar mientras el usuario escribe
-input.addEventListener("input", validarNombre);
+inputUserID.addEventListener("input", actualizarEstadoBoton);
+inputCorreo.addEventListener("input", actualizarEstadoBoton);
 
 // Guardar cuando el usuario haga clic
 boton.addEventListener("click", registrarUsuario);
+// Función para actualizar el estado del botón
+function actualizarEstadoBoton() {
+
+    const userValido = validarUsuario();
+    const correoValido = validarCorreo();
+
+    boton.disabled = !(userValido && correoValido);
+
+}
 
 
+// Validar usuario
+function validarUsuario() {
 
-function validarNombre() {
-
-    const nombre = input.value.trim();
+    // Obtener el usuario ingresado
+    const userID = inputUserID.value.trim();
 
     // Obtener usuarios registrados
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
     // Limpiar mensaje anterior
-    mensaje.textContent = "";
-    mensaje.classList.remove("error", "success");
+    mensajeUserID.textContent = "";
+    mensajeUserID.classList.remove("error", "success");
 
     // Campo vacío
-    if (nombre === "") {
+    if (userID === "") {
 
-        mensaje.textContent = "El nombre es obligatorio.";
-        mensaje.classList.add("error");
+        mensajeUserID.textContent = "El usuario es obligatorio.";
+        mensajeUserID.classList.add("error");
 
-        boton.disabled = true;
         return false;
 
     }
 
-    // Validar nombre repetido
+    // Validar que el usuario no exista
     const existe = usuarios.some(usuario =>
-        usuario.nombre.toLowerCase() === nombre.toLowerCase()
+        usuario.userID.toLowerCase() === userID.toLowerCase()
     );
 
     if (existe) {
 
-        mensaje.textContent = "Ese nombre ya existe.";
-        mensaje.classList.add("error");
+        mensajeUserID.textContent = "Ese usuario ya está registrado.";
+        mensajeUserID.classList.add("error");
 
-        boton.disabled = true;
         return false;
 
     }
 
     // Todo correcto
-    mensaje.textContent = "Nombre disponible.";
-    mensaje.classList.add("success");
-
-    boton.disabled = false;
+    mensajeUserID.textContent = "Usuario disponible.";
+    mensajeUserID.classList.add("success");
 
     return true;
+
 }
 
+//validar correo
+function validarCorreo(){
+
+    const correo = inputCorreo.value.trim();
+
+    // Obtener correos registrados
+    const correos = JSON.parse(localStorage.getItem("correos")) || [];
+
+    // Campo vacío
+    if (correo === "") {
+
+        mensajeCorreo.textContent = "El correo es obligatorio.";
+        mensajeCorreo.classList.remove("error", "success");
+
+        return false;
+
+    }
+
+    // Validar correo repetido
+    const existe = correos.some(c => c.toLowerCase() === correo.toLowerCase());
+
+    if (existe) {
+
+        mensajeCorreo.textContent = "Ese correo ya está registrado.";
+        mensajeCorreo.classList.add("error");
+
+        return false;
+
+    }
+
+    // Todo correcto
+    mensajeCorreo.textContent = "Correo disponible.";
+    mensajeCorreo.classList.add("success");
+
+    return true;
+
+}
+
+//registrar usuario
 function registrarUsuario(e) {
 
     e.preventDefault();
 
     // Validar nuevamente antes de guardar
-    if (!validarNombre()) return;
+    if (!validarUsuario()) return;
+    if (!validarCorreo()) return;
 
-    const nombre = input.value.trim();
+    
+    const userID = inputUserID.value.trim();
+    const correo = inputCorreo.value.trim();
 
     // Obtener usuarios registrados
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -146,14 +199,10 @@ function registrarUsuario(e) {
     // Crear objeto usuario
     const nuevoUsuario = {
 
-        nombre: nombre,
-
-        userID: "",
-
-        correo: "",
-
+        nombre: "",
+        userID: userID,
+        correo: correo,
         password: "",
-
         avatar: avatarSeleccionado
 
 };
@@ -164,14 +213,22 @@ function registrarUsuario(e) {
     // Guardar nuevamente
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    mensaje.textContent = "Usuario registrado correctamente.";
-    mensaje.classList.remove("error");
-    mensaje.classList.add("success");
+    mensajeUserID.textContent = "Usuario registrado correctamente.";
+    mensajeUserID.classList.remove("error");
+    mensajeUserID.classList.add("success");
 
-    // Limpiar el input
-    input.value = "";
+    // Limpiar los input
+    inputUserID.value = "";
+    inputCorreo.value = "";
+
+    //limpiar mensajes
+    mensajeUserID.textContent = "";
+    mensajeCorreo.textContent = "";
+
+    mensajeUserID.classList.remove("error", "success");
+    mensajeCorreo.classList.remove("error", "success");
 
     // Deshabilitar nuevamente el botón
-    boton.disabled = true;
+    actualizarEstadoBoton();
 
 }
