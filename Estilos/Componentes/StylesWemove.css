@@ -540,7 +540,7 @@
 }
 
 /* Contenedor de pasos debe posicionarse relativo para los puntos absolutos */
-#stepsContainer{
+.stepsContainer{
     position: relative;
 }
 

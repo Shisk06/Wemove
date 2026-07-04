@@ -57,7 +57,7 @@ avatars.forEach((avatar) => {
     });
 
 });
-
+// Aplicar avatar
 btnAplicarAvatar.addEventListener("click", () => {
 
     avatarSeleccionado = avatarTemporal;
@@ -141,6 +141,8 @@ function validarUsuario() {
     return true;
 
 }
+//formato correo
+const formatoCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 //validar correo
 function validarCorreo(){
@@ -160,12 +162,25 @@ function validarCorreo(){
 
     }
 
+    //validar formato de correo
+    if (!formatoCorreo.test(correo)) {
+
+    mensajeCorreo.textContent = "Ingresa un correo electrónico válido.";
+    mensajeCorreo.classList.remove("error", "success");
+    mensajeCorreo.classList.remove("success");
+    mensajeCorreo.classList.add("error");
+
+    return false;
+
+}
+
     // Validar correo repetido
     const existe = correos.some(c => c.toLowerCase() === correo.toLowerCase());
 
     if (existe) {
 
         mensajeCorreo.textContent = "Ese correo ya está registrado.";
+        mensajeCorreo.classList.remove("error", "success");
         mensajeCorreo.classList.add("error");
 
         return false;
@@ -174,6 +189,7 @@ function validarCorreo(){
 
     // Todo correcto
     mensajeCorreo.textContent = "Correo disponible.";
+    mensajeCorreo.classList.remove("error", "success");
     mensajeCorreo.classList.add("success");
 
     return true;
